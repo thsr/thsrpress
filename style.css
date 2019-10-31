@@ -791,6 +791,27 @@ ul.wp-block-gallery:not(.alignright) {
 }
 
 /* -------------------------------------------------------------------------------- */
+/*    Page: Posts by category
+/* -------------------------------------------------------------------------------- */
+.page-template-page-postsbycategory h2 {
+    border: 0;
+    padding-bottom: 0;
+    font-weight: 900;
+}
+
+.page-template-page-postsbycategory ul {
+    list-style-type: none;
+    margin-left: 0;
+}
+
+.page-template-page-postsbycategory ul li .meta {
+    display: inline-block;
+    width: 100px;
+    margin: 0 1rem 0 0;
+    text-align: right;
+}
+
+/* -------------------------------------------------------------------------------- */
 /*    6.    Comments
 /* -------------------------------------------------------------------------------- */
 h3.comment-reply-title { border: 0; }
