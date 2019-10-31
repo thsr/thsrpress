@@ -54,25 +54,8 @@ get_header();
 
                             <div class="meta">
 
-<!--                                 <p> -->
-
-<!--                                     <a href="<?php the_permalink(); ?>">Updated <time datetime="<?php the_modified_time('Y-m-d'); ?>"><?php the_modified_time(get_option('date_format')); ?></time></a> -->
-
-<!--                                     <?php if ( comments_open() && ! post_password_required() ) : ?> -->
-<!--                                         <span class="sep"></span><?php comments_popup_link( __( 'Add Comment', 'davis' ), __( '1 Comment', 'davis' ), '% ' . __( 'Comments', 'davis' ), '', __( 'Comments off', 'davis' ) ); ?> -->
-<!--                                     <?php endif; ?> -->
-
-<!--                                     <?php if ( is_sticky() ) : ?> -->
-<!--                                         <span class="sep"></span><?php _e( 'Sticky', 'davis' ); ?> -->
-<!--                                     <?php endif ?> -->
-
-<!--                                 </p> -->
-
-<!--                                 <?php edit_post_link($text="edit", $before='<p>', $after='</p>'); ?> -->
-
                                 <?php if ( is_singular( 'post' ) ) : ?>
 
-<!--                                     <p><?php the_category( ', ' ); ?></p> -->
                                     <p><?php the_tags( ' #', ' #', ' ' ); ?></p>
 
                                 <?php endif; ?>
