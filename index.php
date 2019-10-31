@@ -17,17 +17,19 @@ get_header();
                             <<?php echo $post_title_elem ?> class="entry-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></<?php echo $post_title_elem ?>>
 
                         <?php endif; ?>
-                        <?php
 
-                        $post_type = get_post_type();
+                        <?php $post_type = get_post_type(); ?>
 
-                        if ( $post_type == 'post' ) : ?>
-                        <div class="entry-subtitle">
-                            <a href="<?php the_permalink(); ?>"><time datetime="<?php the_modified_time('Y-m-d'); ?>"><?php the_modified_time(get_option('date_format')); ?></time></a>
-                            <span class="sep"></span>
-                            <?php the_category( ', ' ); ?>
+                        <?php if ( $post_type == 'post' ) : ?>
 
-                        </div>
+                            <div class="entry-subtitle">
+
+                                <a href="<?php the_permalink(); ?>"><time datetime="<?php the_modified_time('Y-m-d'); ?>"><?php the_modified_time(get_option('date_format')); ?></time></a>
+                                <span class="sep"></span>
+                                <?php the_category( ', ' ); ?>
+
+                            </div>
+
                         <?php endif; ?>
 
                         <?php if ( has_post_thumbnail() && ! post_password_required() ) : ?>
