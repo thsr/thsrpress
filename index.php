@@ -5,13 +5,13 @@
 get_header();
 ?>
 
-            <?php if ( have_posts() ) :
+            <?php if (have_posts()) :
 
-                while ( have_posts() ) : the_post(); ?>
+                while (have_posts()) : the_post(); ?>
 
-                    <div <?php post_class( 'post' ); ?>>
+                    <div <?php post_class('post'); ?>>
 
-                        <?php if ( ! get_post_format() == 'aside' ) : ?>
+                        <?php if (!get_post_format() == 'aside') : ?>
 
                             <?php $post_title_elem = is_single() ? 'h1' : 'h2'; ?>
                             <<?php echo $post_title_elem ?> class="entry-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></<?php echo $post_title_elem ?>>
@@ -30,12 +30,12 @@ get_header();
 
                             </div>
 
-                        <?php endif; ?>
+                        <?php endif;
 
-                        <?php if ( has_post_thumbnail() && ! post_password_required() ) : ?>
+                        if ( has_post_thumbnail() && ! post_password_required() ) : ?>
 
                             <a href="<?php the_permalink(); ?>" class="featured-image">
-                                <?php the_post_thumbnail( 'post-image' ); ?>
+                                <?php the_post_thumbnail('post-image'); ?>
                             </a>
 
                         <?php endif; ?>
@@ -48,17 +48,17 @@ get_header();
 
                         <?php
 
-                        if ( is_singular() ) wp_link_pages();
+                        if (is_singular()) wp_link_pages();
 
                         $post_type = get_post_type();
 
-                        if ( $post_type == 'post' ) : ?>
+                        if ($post_type == 'post') : ?>
 
                             <div class="meta">
 
-                                <?php if ( is_singular( 'post' ) ) : ?>
+                                <?php if (is_singular('post')) : ?>
 
-                                    <p><?php the_tags( ' #', ' #', ' ' ); ?></p>
+                                    <p><?php the_tags(' #', ' #', ' '); ?></p>
 
                                 <?php endif; ?>
 
@@ -66,7 +66,7 @@ get_header();
 
                         <?php endif;
 
-                        if ( ( $post_type == 'post' || comments_open() || get_comments_number() ) && ! post_password_required() ) {
+                        if (($post_type == 'post' || comments_open() || get_comments_number()) && !post_password_required()) {
                             comments_template();
                         }
 
@@ -74,26 +74,24 @@ get_header();
 
                     </div><!-- .post -->
 
-                    <?php
-
-                endwhile;
+                <?php endwhile;
 
             else : ?>
 
                 <div class="post">
 
-                    <p><?php _e( 'Sorry, the page you requested cannot be found.', 'davis' ); ?></p>
+                    <p><?php _e('Sorry, the page you requested cannot be found.', 'davis'); ?></p>
 
                 </div><!-- .post -->
 
             <?php endif;
 
-            if ( ! is_singular() && ( get_previous_posts_link() || get_next_posts_link() ) ) : ?>
+            if (!is_singular() && (get_previous_posts_link() || get_next_posts_link())) : ?>
 
                 <div class="pagination">
 
-                    <?php previous_posts_link( '&larr; ' . __( 'Newer posts', 'davis' ) ); ?>
-                    <?php next_posts_link( __( 'Older posts', 'davis') . ' &rarr;' ); ?>
+                    <?php previous_posts_link('&larr; ' . __('Newer posts', 'davis')); ?>
+                    <?php next_posts_link( __('Older posts', 'davis') . ' &rarr;'); ?>
 
                 </div><!-- .pagination -->
 

@@ -5,18 +5,18 @@
 get_header();
 ?>
 
-<div <?php post_class( 'post' ); ?>>
+<div <?php post_class('post'); ?>>
     <div class="content">
 
-    <?php $cats = get_categories(); ?>
+        <?php $cats = get_categories();
 
-        <?php foreach ($cats as $cat) : ?>
+        foreach ($cats as $cat) :
 
-            <?php $cat_id = $cat->term_id; ?>
+            $cat_id = $cat->term_id; ?>
 
             <h2><?php echo $cat->name ?></h2>
 
-                <?php query_posts("cat=$cat_id&posts_per_page=100"); if ( have_posts() ) : ?>
+                <?php query_posts('cat=$cat_id&posts_per_page=100'); if ( have_posts() ) : ?>
 
                     <ul>
 
@@ -33,9 +33,9 @@ get_header();
 
                     </ul>
 
-                <?php endif; ?>
+                <?php endif;
 
-        <?php endforeach; ?>
+        endforeach; ?>
 
     </div>
 </div>
