@@ -14,8 +14,6 @@
 
         <link rel="profile" href="http://gmpg.org/xfn/11">
 
-        <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono|IBM+Plex+Sans:300,400,500,700&display=swap" rel="stylesheet">
-
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/styles/atelier-forest-light.min.css">
         <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/highlight.min.js"></script>
         <script>hljs.initHighlightingOnLoad();</script>
