@@ -4,14 +4,12 @@ Theme Name: thsrpress
 Theme URI: -
 Author: thsr.io
 Author URI: https://thsr.io
-Description: -
+Description: Adapted from Anders Norén's theme "Davis"
 Version: 1.0
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: thsrpress
 Tags: one-column, two-columns, right-sidebar, flexible-header, accessibility-ready, custom-colors, custom-header, custom-menu, custom-logo, editor-style, featured-images, footer-widgets, post-formats, rtl-language-support, sticky-post, theme-options, threaded-comments, translation-ready
-This theme, like WordPress, is licensed under the GPL.
-Adapted from Anders Norén's theme "Davis"
 
 -----------------------------------------------------------------------------------
 
@@ -126,7 +124,7 @@ body * {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
 }
 
 a {
@@ -447,7 +445,7 @@ em {
 .content h5,
 .content h6 {
     font-weight: 500;
-    margin: 2rem 0 1rem;
+    margin: 2rem 0 .7rem;
 }
 
 .content h2 {
@@ -773,7 +771,6 @@ ul.wp-block-gallery:not(.alignright) {
 }
 
 /* Block: Column --------------------------------------- */
-
 .wp-block-column {
     padding: 0 5px;
 }
