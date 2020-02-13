@@ -53,9 +53,9 @@
 
         <main class="wrapper" id="site-content" role="main">
 
-            <?php if (is_archive() || is_search()) :
+            <?php if (is_archive() || is_search()) : ?>
 
-                if (is_search()) {
+                <?php if (is_search()) {
                     global $wp_query;
                     // Translators: %s = The search query
                     $archive_title = sprintf(_x('Search Results: &ldquo;%s&rdquo;', '%s = The search query', 'davis'), get_search_query());

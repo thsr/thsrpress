@@ -5,9 +5,9 @@
 get_header();
 ?>
 
-            <?php if (have_posts()) :
+            <?php if (have_posts()) : ?>
 
-                while (have_posts()) : the_post(); ?>
+                <?php while (have_posts()) : the_post(); ?>
 
                     <div <?php post_class('post'); ?>>
 
@@ -30,9 +30,9 @@ get_header();
 
                             </div>
 
-                        <?php endif;
+                        <?php endif; ?>
 
-                        if ( has_post_thumbnail() && ! post_password_required() ) : ?>
+                        <?php if ( has_post_thumbnail() && ! post_password_required() ) : ?>
 
                             <a href="<?php the_permalink(); ?>" class="featured-image">
                                 <?php the_post_thumbnail('post-image'); ?>
@@ -46,9 +46,7 @@ get_header();
 
                         </div><!-- .content -->
 
-                        <?php
-
-                        if (is_singular()) wp_link_pages();
+                        <?php if (is_singular()) wp_link_pages();
 
                         $post_type = get_post_type();
 
@@ -64,19 +62,17 @@ get_header();
 
                             </div><!-- .meta -->
 
-                        <?php endif;
+                        <?php endif; ?>
 
-                        if (($post_type == 'post' || comments_open() || get_comments_number()) && !post_password_required()) {
+                        <?php if (($post_type == 'post' || comments_open() || get_comments_number()) && !post_password_required()) {
                             comments_template();
-                        }
-
-                        ?>
+                        } ?>
 
                     </div><!-- .post -->
 
-                <?php endwhile;
+                <?php endwhile; ?>
 
-            else : ?>
+            <?php else : ?>
 
                 <div class="post">
 
@@ -84,9 +80,9 @@ get_header();
 
                 </div><!-- .post -->
 
-            <?php endif;
+            <?php endif; ?>
 
-            if (!is_singular() && (get_previous_posts_link() || get_next_posts_link())) : ?>
+            <?php if (!is_singular() && (get_previous_posts_link() || get_next_posts_link())) : ?>
 
                 <div class="pagination">
 
