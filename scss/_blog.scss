@@ -1,0 +1,82 @@
+.archive-header {
+    margin: 0;
+    text-align: center;
+    width: 100%;
+}
+
+.archive-title {
+    font-size: 1.5rem;
+    font-weight: 300;
+    line-height: 1.4;
+    text-align: inherit;
+}
+
+.archive-description {
+    margin: 1.25rem 0 0;
+}
+
+.archive-description p {
+    text-align: inherit;
+}
+
+.entry-title {
+    font-size: 1.5rem;
+    line-height: 1.4;
+    text-align: center;
+    font-weight: 900;
+    border: none;
+    margin: 1.75rem 0 1.5rem;
+}
+
+.entry-subtitle {
+    color: #767676;
+    font-size: 1.2rem;
+    line-height: 1.4;
+    text-align: center;
+    font-weight: 300;
+    border: none;
+    margin: -1rem 0 1.5rem;
+}
+
+.entry-subtitle a {
+    color: #767676;
+}
+
+.archive-header:before,
+.post:before,
+.comments:before,
+.comment-respond:before,
+.comments .comment-respond:after,
+.pagination:before,
+footer:before {
+    background-size: auto 100%;
+    text-align: center;
+    content: "\2501\2501\2501\2501\2501";
+    color: #ccc;
+    display: block;
+    height: 16px;
+    margin: 80px auto;
+}
+
+.featured-image {
+    display: block;
+    margin: 0 auto 30px auto;
+}
+
+.meta {
+    color: #767676;
+    margin-top: 30px;
+}
+
+.post .meta p {
+    line-height: 1.55;
+    margin-bottom: 0;
+    text-align: center;
+}
+
+span.sep { margin: 0 15px; }
+
+.meta p + p { margin-top: 15px; }
+
+.meta a,
+.meta a:hover { color: #767676; }

@@ -1,0 +1,74 @@
+h3.comment-reply-title { border: 0; }
+
+.comments-closed { text-align: center; }
+
+.comment { margin-top: 40px; }
+
+.comment a { text-decoration: underline; }
+
+.commentlist > .comment:first-child { margin-top: 0; }
+
+.comment .comment { margin: 40px 0 0 30px; }
+
+.comment-author a,
+.comment-meta a,
+.comment .reply a {
+    text-decoration: none;
+}
+
+.comment-author {
+    padding-left: 50px;
+    position: relative;
+}
+
+.bypostauthor .comment-author cite { font-weight: 700; }
+
+.comment-author .says { display: none; }
+
+.comment-author .avatar {
+    position: absolute;
+        left: 0;
+        top: 1px;
+    width: 40px;
+}
+
+.comment-awaiting-moderation {
+    font-size: .9rem;
+    font-style: italic;
+    padding-left: 50px;
+}
+
+.comment-meta {
+    font-size: .9rem;
+    margin: 2px 0 20px 0;
+    padding-left: 50px;
+}
+
+.comment-meta a,
+.comment-meta a:hover { color: #767676; }
+
+.comment .reply {
+    font-size: .9rem;
+    font-style: italic;
+    margin-top: 15px;
+    text-align: right;
+}
+
+.comment .reply a { color: #767676; }
+.comment .reply a:hover { text-decoration: underline; }
+
+
+
+/**
+ * Respond
+ */
+.comment-respond p + p { margin-top: 20px; }
+
+.post .comment-reply-title { text-align: center; }
+
+.logged-in-as {
+    margin: -10px 0 30px;
+    text-align: center;
+}
+
+.comment-respond label { display: block; }
